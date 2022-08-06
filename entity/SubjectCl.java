@@ -4,18 +4,23 @@ import type.SubjectType;
 
 import java.util.Scanner;
 
-public class SubjectCl {
+public class SubjectCl { //Subject Class
     public int id;
     public static int Auto_Id;
     public String sjname;
     public int unitofStudy;
     public SubjectType subjectType;
 
+
     public SubjectCl(int id, String sjname, int unitofStudy, SubjectType subjectType) {
         this.id = id;
         this.sjname = sjname;
         this.unitofStudy = unitofStudy;
         this.subjectType = subjectType;
+    }
+
+    public SubjectCl() {
+
     }
 
     public int getId() {
@@ -88,6 +93,16 @@ public class SubjectCl {
             case 3:
                 this.setType(SubjectType.CN);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "SubjectCl{" +
+                "id=" + id +
+                ", sjname='" + sjname + '\'' +
+                ", unitofStudy=" + unitofStudy +
+                ", subjectType=" + subjectType +
+                '}';
     }
 }
 

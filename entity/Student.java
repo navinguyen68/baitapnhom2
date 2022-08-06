@@ -18,6 +18,10 @@ public class Student {
         this.group = group;
     }
 
+    public Student() {
+
+    }
+
     public int getStudentId() {
         return studentId;
     }
@@ -70,6 +74,17 @@ public class Student {
         this.setAddress(new Scanner(System.in).nextLine());
         System.out.println("Nhap lop cua ban: ");
         this.setGroup(new Scanner(System.in).nextLine());
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", numberphone=" + numberphone +
+                ", group='" + group + '\'' +
+                '}';
     }
 }
 
