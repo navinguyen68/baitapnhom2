@@ -1,47 +1,44 @@
 package entity;
 
-public class Score {
+import java.util.Arrays;
 
-    private SubjectCl subjectCls;
-    public int number; //diemso
-    public int averageScore; //diem trung binh
+public class Score extends InputScore {
+    private Student student;
 
-    public Score(SubjectCl subjectCls, int number, int averageScore) {
-        this.subjectCls = subjectCls;
-        this.number = number;
-        this.averageScore = averageScore;
+    private ScoreDtail[] scoreDtails;
+
+    public Score(Student student, ScoreDtail[] scoreDtails) {
+        this.student = student;
+        this.scoreDtails = scoreDtails;
     }
 
-    public SubjectCl getSubjectCls() {
-        return subjectCls;
+    public Student getStudent() {
+        return student;
     }
 
-    public void setSubjectCls(SubjectCl subjectCls) {
-        this.subjectCls = subjectCls;
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
-    public int getNumber() {
-        return number;
+    public ScoreDtail[] getScoreDtails() {
+        return scoreDtails;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public int getAverageScore() {
-        return averageScore;
-    }
-
-    public void setAverageScore(int averageScore) {
-        this.averageScore = averageScore;
+    public void setScoreDtails(ScoreDtail[] scoreDtails) {
+        this.scoreDtails = scoreDtails;
     }
 
     @Override
     public String toString() {
         return "Score{" +
-                "subjectCls=" + subjectCls +
-                ", number=" + number +
-                ", averageScore=" + averageScore +
+                "student=" + student +
+                ", scoreDtails=" + Arrays.toString(scoreDtails) +
                 '}';
+    }
+
+    public Score() {
+    }
+    public void inputScoreSubject(){
+
     }
 }

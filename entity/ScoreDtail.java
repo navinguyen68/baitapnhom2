@@ -2,41 +2,41 @@ package entity;
 
 import java.util.Arrays;
 
-public class ScoreDtail {
-    private Student students;
-    private ScoreDtail[] scoreDtails;
+public class ScoreDtail extends InputScore{
+    private SubjectCl scoreDtails;
+    private int scoreNum;
 
-    public ScoreDtail(Student students, ScoreDtail[] scoreDtails) {
-        this.students = students;
+    public ScoreDtail() {
+    }
+
+    public ScoreDtail(SubjectCl scoreDtails, int scoreNum) {
         this.scoreDtails = scoreDtails;
+        this.scoreNum = scoreNum;
     }
 
-    public ScoreDtail(Student student, Score[] scores) {
-    }
-
-    public Student getStudents() {
-        return students;
-    }
-
-    public void setStudents(Student students) {
-        this.students = students;
-    }
-
-    public ScoreDtail[] getScoreDtails() {
+    public SubjectCl getScoreDtails() {
         return scoreDtails;
     }
 
-    public void setScoreDtails(ScoreDtail[] scoreDtails) {
+    public void setScoreDtails(SubjectCl scoreDtails) {
         this.scoreDtails = scoreDtails;
+    }
+
+    public int getScoreNum() {
+        return scoreNum;
+    }
+
+    public void setScoreNum(int scoreNum) {
+        this.scoreNum = scoreNum;
     }
 
     @Override
     public String toString() {
         return "ScoreDtail{" +
-                "students=" + students +
-                ", scoreDtails=" + Arrays.toString(scoreDtails) +
+                "scoreDtails=" + scoreDtails +
+                ", scoreNum=" + scoreNum +
                 '}';
     }
-
-
 }
+
+

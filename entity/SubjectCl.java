@@ -4,7 +4,7 @@ import type.SubjectType;
 
 import java.util.Scanner;
 
-public class SubjectCl { //Subject Class
+public class SubjectCl implements Inputable { //Subject Class
     public int id;
     public static int Auto_Id;
     public String sjname;
@@ -63,7 +63,7 @@ public class SubjectCl { //Subject Class
         this.subjectType = subjectType;
     }
 
-    public void inputSubject() {
+    public void inputinfo() {
         System.out.println("Nhap ma mon hoc: ");
         this.id = Auto_Id++;
         this.setId(new Scanner(System.in).nextInt());

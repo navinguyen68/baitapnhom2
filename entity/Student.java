@@ -2,7 +2,7 @@ package entity;
 
 import java.util.Scanner;
 
-public class Student {
+public class Student implements Inputable {
     public int studentId ;
     public static int Auto_studentId = 10000;
     public String name;

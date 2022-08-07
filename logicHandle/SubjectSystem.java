@@ -19,7 +19,7 @@ public class SubjectSystem {
         int newSubject = new Scanner(System.in).nextInt();
         for ( int i = 0; i < newSubject; i ++  ) {
             SubjectCl subjectCl = new SubjectCl();
-            subjectCl.inputSubject();
+            subjectCl.inputinfo();
             saveSubjectinfo(subjectCl);
 
         }
